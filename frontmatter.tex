@@ -1,0 +1,49 @@
+% !TeX root = index.tex
+
+\newlength{\drop}% for my convenience
+%\newcommand*{\FSfont}[1]{\fontencoding{T1}\fontfamily{#1}\selectfont}
+\newcommand*{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
+\definecolor{Medium}{gray}{0.6}
+
+\newcommand*{\titlePM}{\begingroup% \titleGM with Ornaments
+\drop = 0.05\textheight
+\vspace*{\baselineskip}
+\vfill
+\hbox{%
+\hspace*{0.1\textwidth}%
+{\wb{18pt}{18pt}
+\begin{picture}(0,0)
+\multiput(0,0)(0,20){27}{\textcolor{Medium}{Q}}
+\end{picture}
+}
+% \rule{1pt}{\textheight}
+\hspace*{0.15\textwidth}%
+\parbox[b]{0.75\textwidth}{
+\vbox{%
+\vspace{\drop}
+{\noindent\Huge\bfseries \thetitle
+%\\[0.5\baselineskip]
+}\\[2\baselineskip]
+{\Huge\itshape Coloring- and Workbook
+}\\[4\baselineskip]
+%{\Large \theauthor}
+%\\ [2\baselineskip]
+{\Large \thedate}\par
+\vspace{0.45\textheight}
+{\noindent Initial concept by Christian Clausen}\\[\baselineskip] % \fbox{$\mathcal{PL}$} Publishing Inc
+}}}% ends of vbox/parbox/hbox
+\vfill
+\null
+\endgroup}
+
+%\thispagestyle{empty}
+\pagestyle{empty}
+\titlePM
+\clearpage
+\pagestyle{headings}
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+

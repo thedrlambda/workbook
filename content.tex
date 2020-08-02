@@ -1,0 +1,475 @@
+% !TeX root = index.tex
+
+\chapter{Terminology}
+
+\begin{matching}
+Connect the terms on the left to the closest matching code on the right. Each term should be connected to one line of code, and vice versa.
+
+\begin{tabular}{l}
+Definition \tikz[remember picture] \node [] (b) {};    \\
+Declaration \tikz[remember picture] \node [] (a) {};   \\
+Initialization \tikz[remember picture] \node [] (c) {};\\
+Instantiation \tikz[remember picture] \node [] (d) {}; \\
+\end{tabular}
+\hspace{2cm}
+\begin{tabular}{l}
+\tikz[remember picture] \node [] (a2) {}; \code{A a;} \\
+\tikz[remember picture] \node [] (d2) {}; \code{new A()} \\
+\tikz[remember picture] \node [] (b2) {}; \code{a = new A();} \\
+\tikz[remember picture] \node [] (c2) {}; \code{A a = new A();} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+  \draw (d.west) edge (d2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{highlight}
+Highlight the \textbf{keywords} in the follow code:
+
+\ifdefined\ANSWERS
+\lstset{
+morekeywords=[0]{public, class, static, void}, 
+keywordstyle=[0]{\color{dkred}\textbf},
+}
+\fi
+\inputcode{HelloWorld.java}{ALL}
+\end{highlight}
+
+
+
+\begin{eliminate}
+Complete this text by crossing out the incorrect option:
+
+We pass \textbf{arguments/\answerout{parameters}} to functions when we call them. The \textbf{\answerout{arguments}/parameters} declare the types, so when we call a function the \textbf{arguments/\answerout{parameters}} should be expressions of those types. When we \textbf{\answerout{initialize}/instantiate/\answerout{declare}} an object the constructor is invoked. Then we can also pass \textbf{arguments/\answerout{parameters}} to that constructor.
+\end{eliminate}
+
+
+
+\begin{matching}
+Connect the terms on the left to the closest matching code on the right. Each term should be connected to one line of code, and vice versa.
+
+\begin{tabular}{l}
+Assignment \tikz[remember picture] \node [] (a) {};\\
+Expression \tikz[remember picture] \node [] (b) {};\\
+Statement \tikz[remember picture] \node [] (c) {};\\
+\end{tabular}
+\hspace{2cm}
+\begin{tabular}{l}
+\tikz[remember picture] \node [] (b2) {}; \code{new A()} \\
+\tikz[remember picture] \node [] (a2) {}; \code{a = new A()} \\
+\tikz[remember picture] \node [] (c2) {}; \code{A a = new A();} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{define}
+Mark all that apply: 
+
+\begin{tabular}{r | c c c c}
+& Assignment & Increment & Expression \\
+\hline
+\code{a++} & & \answertick & \answertick \\
+\code{a = 1} & \answertick & & \answertick \\
+\code{a + 1} & & & \answertick \\
+\code{a == 1} & & & \answertick \\
+\code{a += 1} & \answertick & \answertick & \answertick \\
+\code{a = a + 1} & \answertick & \answertick & \answertick \\
+\code{a == a + 1} & & & \answertick \\
+\end{tabular}
+\end{define}
+
+
+
+\begin{highlight}
+Syntax color the follow code:
+\\ \colorsquare{dkred} Locals
+\hspace{3cm} \colorsquare{dkblue} Parameters
+\hspace{3cm} \colorsquare{dkgreen} Fields
+
+\ifdefined\ANSWERS
+\lstset{
+morekeywords=[0]{args, r}, 
+keywordstyle=[0]{\color{dkblue}\textbf},
+morekeywords=[1]{result, c, e}, 
+keywordstyle=[1]{\color{dkred}\textbf},
+morekeywords=[2]{PI, radius}, 
+keywordstyle=[2]{\color{dkgreen}\textbf},
+}
+\fi
+\inputcode{Circle.java}{ALL}
+\end{highlight}
+
+
+
+\begin{matching}
+Connect the terms on the left to the closest matching code on the right. Each term should be connected to one line of code, and vice versa.
+
+\begin{tabular}{l}
+Assignment \tikz[remember picture] \node [] (a) {}; \\
+Expression \tikz[remember picture] \node [] (b) {}; \\
+Incrementation \tikz[remember picture] \node [] (c) {}; \\
+Statement \tikz[remember picture] \node [] (d) {}; \\
+\end{tabular}
+\hspace{2cm}
+\begin{tabular}{l}
+\tikz[remember picture] \node [] (c2) {}; \code{a++} \\
+\tikz[remember picture] \node [] (b2) {}; \code{a + 1} \\
+\tikz[remember picture] \node [] (d2) {}; \code{a += 1;} \\
+\tikz[remember picture] \node [] (a2) {}; \code{a = a + 1} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+  \draw (d.west) edge (d2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{complete}
+Place each of the following labels twice to make the sentences true:
+\begin{itemize}
+\item Statements
+\item Expressions
+\item Assignments
+\end{itemize}
+All \answerbox{150pt}{Assignments} are \answerbox{150pt}{Expressions}.
+\\ All \answerbox{150pt}{Assignments} can be \answerbox{150pt}{Statements}.
+\\ But not all \answerbox{150pt}{Expressions} can be \answerbox{150pt}{Statements}.
+\end{complete}
+
+
+
+\begin{matching}
+Connect the terms on the left to the closest matching code on the right. Each term should be connected to one line of code, and vice versa.
+
+\begin{tabular}{l}
+Incrementation \tikz[remember picture] \node [] (a) {}; \\
+Initialization \tikz[remember picture] \node [] (b) {}; \\
+Instantiation \tikz[remember picture] \node [] (c) {}; \\
+Iteration \tikz[remember picture] \node [] (d) {}; \\
+\end{tabular}
+\hspace{2cm}
+\begin{tabular}{l}
+\tikz[remember picture] \node [] (a2) {}; \code{a++} \\
+\tikz[remember picture] \node [] (c2) {}; \code{new A()} \\
+\tikz[remember picture] \node [] (b2) {}; \code{A a = new A()} \\
+\tikz[remember picture] \node [] (d2) {}; \code{for (A a : array);} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+  \draw (d.west) edge (d2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{labeling}
+Place the following labels:
+\begin{itemize}
+\item Instance
+\item Instantiation
+\item Instance variable
+\end{itemize}
+
+\begin{lstlisting}[escapechar = !]
+public class Instance {
+  private A a;!\tikz[remember picture] \node [] (a) {};!
+  public void foo() {
+    a!\tikz[remember picture] \node [] (b) {};!= new A();!\tikz[remember picture] \node [] (c) {};!
+  }
+}
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay]
+  \node [right = 1cm of a] (A) {\answerbox{150pt}{Instance variable}};
+  \node [right = 1cm of c] (C) {\answerbox{150pt}{Instantiation}};  
+  \node [below right = 0.3cm and 1cm of b] (B) {\answerbox{150pt}{Instance}};
+  \draw (A.west) edge (a.east) ;
+  \draw (B.west) edge (b.south) ;  
+  \draw (C.west) edge (c.east) ;
+\end{tikzpicture} 
+\end{labeling}
+
+
+
+\begin{highlight}
+Syntax color the follow code:
+\\ \colorsquare{dkred} Statement keywords
+\hspace{3cm} \colorsquare{dkblue} Other keywords
+
+\ifdefined\ANSWERS
+\lstset{
+morekeywords=[0]{while, for, if, else, switch, case, try, catch, return}, 
+keywordstyle=[0]{\color{dkred}\textbf},
+morekeywords=[1]{public, private, class, static, final, this, new, void}, 
+keywordstyle=[1]{\color{dkblue}\textbf},
+}
+\fi
+\inputcode{Circle.java}{ALL}
+\end{highlight}
+
+
+
+\chapter{Types}
+
+
+
+\begin{matching}
+Connect the terms on the left to the closest matching code on the right. Each term should be connected to one line of code, and vice versa.
+
+\begin{tabular}{l}
+\code{boolean} \tikz[remember picture] \node [] (a) {}; \\
+\code{byte} \tikz[remember picture] \node [] (b) {}; \\
+\code{char} \tikz[remember picture] \node [] (c) {}; \\
+\code{double} \tikz[remember picture] \node [] (d) {}; \\
+\code{float} \tikz[remember picture] \node [] (e) {}; \\
+\code{int}	\tikz[remember picture] \node [] (f) {};  \\
+\code{long} \tikz[remember picture] \node [] (g) {}; \\
+\code{Object} \tikz[remember picture] \node [] (h) {}; \\
+\code{short} \tikz[remember picture] \node [] (i) {}; \\
+\code{String} \tikz[remember picture] \node [] (j) {}; \\
+\end{tabular}
+\hspace{3cm}
+\begin{tabular}{l}
+\tikz[remember picture] \node [] (j2) {}; \code{"A"} \\
+\tikz[remember picture] \node [] (c2) {}; \code{'A'} \\
+\tikz[remember picture] \node [] (b2) {}; \code{-10} \\
+\tikz[remember picture] \node [] (g2) {}; \code{20L} \\
+\tikz[remember picture] \node [] (a2) {}; \code{true} \\
+\tikz[remember picture] \node [] (h2) {}; \code{null} \\
+\tikz[remember picture] \node [] (i2) {}; \code{10000} \\
+\tikz[remember picture] \node [] (d2) {}; \code{1.5690} \\
+\tikz[remember picture] \node [] (f2) {}; \code{127000} \\
+\tikz[remember picture] \node [] (e2) {}; \code{3.1415f} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+  \draw (d.west) edge (d2.east) ;
+  \draw (e.west) edge (e2.east) ;
+  \draw (f.west) edge (f2.east) ;
+  \draw (g.west) edge (g2.east) ;
+  \draw (h.west) edge (h2.east) ;
+  \draw (i.west) edge (i2.east) ;
+  \draw (j.west) edge (j2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{highlight}
+Syntax color the follow code:
+\\ \colorsquare{dkblue} Primitive types
+\hspace{3cm} \colorsquare{dkred} Other types
+
+\ifdefined\ANSWERS
+\lstset{
+morekeywords=[0]{Circle, String, ArrayIndexOutOfBoundsException, System}, 
+keywordstyle=[0]{\color{dkred}\textbf},
+morekeywords=[1]{float, int}, 
+keywordstyle=[1]{\color{dkblue}\textbf},
+}
+\fi
+\inputcode{Circle.java}{ALL}
+\end{highlight}
+
+
+
+\begin{define}
+Mark as precisely as possible which type of variable each expression can be assigned to: 
+
+\begin{tabular}{r | c c c c}
+& \code{int} & \code{int[]} & \code{Integer} & \code{Object} \\
+\hline
+\code{5} & \answertick & & \answertick & \\
+\code{5L} & & & & \\
+\code{5.0} & & & & \\
+\code{'5'} & & & & \\
+\code{"5"} & & & & \answertick \\
+\code{null} & & \answertick & \answertick & \answertick \\
+\code{new int[1]} & & \answertick & & \answertick \\
+\end{tabular}
+\end{define}
+
+
+
+\chapter{Accessibility}
+
+
+
+\begin{define}
+Mark as precisely as possible the accessibility for each of the four visibility keywords: 
+
+\begin{tabular}{r | c c c c}
+& \code{public} & \code{private} & \code{protected} & \code{package private} \\
+\hline
+Same object & & & & \\
+Same class & & \answertick & & \\
+Same file & & & & \\
+Inner classes & & & & \\
+Outer classes & & & & \\
+Subclasses & & & \answertick & \\
+Superclasses & & & & \\
+Same package & & & \answertick & \answertick \\
+Everywhere & \answertick & & & \\
+\end{tabular}
+\end{define}
+
+
+
+\chapter{UML}
+
+
+
+\begin{matching}
+Connect the terms on the left to the closest matching diagram on the right. Each term should be connected to one diagram, and vice versa.
+
+\begin{tabular}{l l}
+Aggregation \tikz[remember picture] \node [] (a) {}; \hspace{3cm}
+& \tikz[remember picture] \node [] (d2) {}; \begin{tikzpicture} 
+\umlsimpleclass{A}
+\umlsimpleclass[x=3]{B}
+\umlinherit{B}{A} 
+\end{tikzpicture} \\
+Composition \tikz[remember picture] \node [] (b) {}; & \tikz[remember picture] \node [] (c2) {}; \begin{tikzpicture} 
+\umlsimpleclass{A}
+\umlsimpleclass[x=3]{B}
+\umlimpl{B}{A} 
+\end{tikzpicture} \\
+Implementation \tikz[remember picture] \node [] (c) {}; & \tikz[remember picture] \node [] (a2) {}; \begin{tikzpicture} 
+\umlsimpleclass{A}
+\umlsimpleclass[x=3]{B}
+\umlaggreg{A}{B} 
+\end{tikzpicture} \\
+Inheritance \tikz[remember picture] \node [] (d) {}; & \tikz[remember picture] \node [] (b2) {}; \begin{tikzpicture} 
+\umlsimpleclass{A}
+\umlsimpleclass[x=3]{B}
+\umlcompo{A}{B} 
+\end{tikzpicture} \\
+\end{tabular}
+\ifdefined\ANSWERS
+\begin{tikzpicture}[remember picture, overlay]
+  \draw (a.west) edge (a2.east) ;
+  \draw (b.west) edge (b2.east) ;  
+  \draw (c.west) edge (c2.east) ;
+  \draw (d.west) edge (d2.east) ;
+\end{tikzpicture} 
+\fi
+\end{matching}
+
+
+
+\begin{complete}
+Complete the code, based on the UML class diagram.
+
+\begin{tikzpicture} 
+\umlsimpleclass[]{Client}
+\umlsimpleclass[x=3, y=2, type=interface]{Comparable}
+\umlsimpleclass[x=3, type=abstract]{Person}
+\umlsimpleclass[x=6]{Employee}
+\umldep{Client}{Person}
+\umlimpl{Person}{Comparable}
+\umlinherit{Employee}{Person}
+\end{tikzpicture}
+
+\begin{lstlisting}[escapechar = !]
+abstract class Person !\answerbox{120pt}{implements}! Comparable<Person> {
+}
+class Employee !\answerbox{120pt}{extends}! Person {
+}
+public class Client {
+  private !\answerbox{120pt}{Person}! owner;
+  public Client(){
+    owner = new !\answerbox{120pt}{Employee}!();
+  }
+}
+\end{lstlisting}
+\end{complete}
+
+
+
+% TODO sequence diagram MVC
+
+
+
+\chapter{Loops}
+
+
+
+\begin{eliminate}
+Cross out everything that is not a type of loop in Java:
+
+\begin{tabular}{c c c}
+while \\
+do-while \\
+foreach \\
+\end{tabular}
+\hspace{3cm}
+\begin{tabular}{c c c}
+for \\
+\answerout{do-for} \\
+\answerout{for-in} \\
+\end{tabular}
+\hspace{3cm}
+\begin{tabular}{c c c}
+\answerout{until} \\
+\answerout{do-until} \\
+\answerout{if} \\
+\end{tabular}
+\end{eliminate}
+
+
+
+\begin{complete}
+Complete this for-loop to make the code work:
+
+\begin{lstlisting}[escapechar = !]
+int[] arr = new int[] { 1, 2, 3, 4, 5 };
+int sum = 0;
+for (int i = !\answerbox{90pt}{0}!; !\answerbox{90pt}{i < arr.length}!; !\answerbox{60pt}{i++}!) {
+  sum += arr[i];
+}
+System.out.println(sum);
+\end{lstlisting}
+\end{complete}
+
+
+
+\begin{complete}
+Complete this for-loop to make the code print the numbers in \emph{reverse}:
+
+\begin{lstlisting}[escapechar = $]
+int[] arr = new int[] { 1, 2, 3, 4, 5 };
+String result = "";
+for (int i = $\answerbox{90pt}{arr.length - 1}$; $\answerbox{90pt}{i >= 0}$; $\answerbox{60pt}{i--}$) {
+  if (result.length() != 0) result += " ";
+  result += arr[i];
+}
+System.out.println(result);
+\end{lstlisting}
+\end{complete}
