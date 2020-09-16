@@ -1,0 +1,129 @@
+Topics:
+UML
+Algorithms
+Data structures
+Programming
+Bits
+Concurrency
+
+
+Categories:
+Class diagram
+Sequence diagram
+Definition
+Multiple choice
+Matching
+Calculate
+Color
+Complete
+
+
+
+Match the labels with the code:
+
+Statement
+Expression
+Definition
+Declaration
+Initialization
+Instantiation
+Iteration
+Incrementation
+Assignment
+
+Local variable
+Parameter
+Field variable
+
+Method
+Constructor
+
+Interface
+Class
+Abstract Class
+Static Class
+
+Private
+Protected
+Internal
+Package Private
+Public
+
+Patterns:
+Observer
+State
+Strategy
+MVC
+Visitor
+Composite
+Iterator
+Command
+Singleton
+Factory
+
+Identify patterns in large class diagram
+
+Complete the sequence diagram based on the code
+
+Complete the code based on class diagram
+
+Heap
+Red - black
+Binary search tree
+Shortest path
+DFS
+BFS
+Binary search
+Linear search
+Hashing
+
+Spot the differences:
+Class diagram
+Sequence diagram
+Code
+
+Syntax color
+High light keywords
+High light local variables
+High light ...
+
+Class diagram match arrow
+Aggregation
+Composition
+Inheritance
+Association
+
+OSI model
+
+Flow chart <=> code
+
+Scrum
+
+UP
+Phases
+
+SQL
+
+ER diagram
+
+3 level inheritance prints multiple choices
+
+Recursion
+
+
+Labeling
+Method
+Constructor
+Field
+(Constant)
+
+
+Labeling
+Argument
+Parameter
+
+Labeling
+Dynamic call
+Static call
+
+
